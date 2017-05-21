@@ -1,6 +1,7 @@
 # Drrr Chat Room
-仿照了无头骑士异闻录的聊天界面,一个简单的局域网聊天程序<br />
-![python3.5](https://img.shields.io/badge/python-3.5-blue.svg)
+![python3.5](https://img.shields.io/badge/python-3.5-blue.svg)<br />
+仿照了无头骑士异闻录的聊天界面,一个简单的局域网聊天程序
+
 
 ## Features
 局域网聊天,可连接或建立服务器多人聊天
@@ -9,7 +10,7 @@
 - PyQt5
 
 ## Start
-    python Drr.pyw
+    python Drrr.pyw
 
 ## Shot
 ![登陆界面](https://raw.githubusercontent.com/XDfield/Drrr/master/ReadMeShot/01.png)<br />
