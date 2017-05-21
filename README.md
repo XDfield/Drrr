@@ -1,5 +1,6 @@
 # Drrr Chat Room
-仿照了无头骑士异闻录的聊天界面,一个简单的局域网聊天程序
+仿照了无头骑士异闻录的聊天界面,一个简单的局域网聊天程序<br />
+![python3.5](https://img.shields.io/badge/python-3.5-blue.svg)
 
 ## Features
 局域网聊天,可连接或建立服务器多人聊天
