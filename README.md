@@ -11,7 +11,8 @@
     python Drr.pyw
 
 ## Shot
-
+![登陆界面](https://raw.githubusercontent.com/XDfield/Drrr/master/ReadMeShot/01.png)<br />
+![聊天界面](https://raw.githubusercontent.com/XDfield/Drrr/master/ReadMeShot/02.png)
 
 ## Change Log
 - 2017/05/21 第一次提交,基本功能已经实现
