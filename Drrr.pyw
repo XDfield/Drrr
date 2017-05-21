@@ -257,11 +257,11 @@ class DrrrMainWindow(Ui_Drrr, ShadowWindow):
                 self.serverIP.setAddress(ip)
                 port = int(dialog.portEdit.text())
                 self.socket.connectToHost(self.serverIP.toString(), port)
+                self.socket.connected.connect(self.slotConnected)
+                self.socket.disconnected.connect(self.slotDisconnected)
+                self.socket.readyRead.connect(self.dataReceived)
+                self.isClient = True
             dialog.destroy()
-            self.socket.connected.connect(self.slotConnected)
-            self.socket.disconnected.connect(self.slotDisconnected)
-            self.socket.readyRead.connect(self.dataReceived)
-            self.isClient = True
             # 这里应该按情况修改菜单名称
         else:  # 再点一次则断开服务器
             msg = self.usernameLabel.text() + ' leave chat room.'
@@ -279,12 +279,12 @@ class DrrrMainWindow(Ui_Drrr, ShadowWindow):
             if dialog.exec_():
                 port = int(dialog.portEdit.text())
                 self.server.listen(QHostAddress.Any, port)
+                self.server.updateServer[str].connect(self.updateBrowser)
+                self.updateClients[str].connect(self.server.updateClients)
+                self.isServer = True
+                self.ipInfo.setText('Server Created')
+                self.postBtn.setEnabled(True)
             dialog.destroy()
-            self.server.updateServer[str].connect(self.updateBrowser)
-            self.updateClients[str].connect(self.server.updateClients)
-            self.isServer = True
-            self.ipInfo.setText('Server Created')
-            self.postBtn.setEnabled(True)
         else:
             self.server.close()
             self.isServer = False
